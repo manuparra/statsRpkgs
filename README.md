@@ -5,22 +5,6 @@ This code lets you download CRAN data download statistics of the packages indica
 
 The statistics of downloads from CRAN selected libraries are stored in a RData object. This RData object is updated  on each call to the function get_statistics
 
-## Usage
-
-Use `get_pkgs_statistics(list_packages,rdata_destination)`.
-It will start to download CRAN package download logs for only `list_packages` packages from http://cran-logs.rstudio.com/ from the first day of logs until last day (today), and it will save the package logs on a RData Object in`rdata_destination` file 
-
-
-A working example:
-
-```
-# List of packages to download downloading statistics
-list_pkgs <- c("Rmalschains","frbs","RSNNS","RoughSets");
-
-# Call to the funcion
-get_pkgs_statistics( list_pkgs , "/tmp/stats_dicits.Rdata" );
-```
-
 
 ## Requirements
 
@@ -36,6 +20,26 @@ so, you need install the following packages:
 install.packages("data.table")
 install.packages("RCurl")
 ```
+
+## Usage
+Get statsRpkgs.R and paste it in your R Code.
+
+Then use `get_pkgs_statistics(list_packages,rdata_destination)`.
+It will start to download CRAN package download logs for only `list_packages` packages from http://cran-logs.rstudio.com/ from the first day of logs until last day (today), and it will save the package logs on a RData Object in`rdata_destination` file 
+
+
+A working example:
+
+```
+# List of packages to download downloading statistics
+list_pkgs <- c("Rmalschains","frbs","RSNNS","RoughSets");
+
+# Call to the funcion
+get_pkgs_statistics( list_pkgs , "/tmp/stats_dicits.Rdata" );
+```
+
+
+
 
 
 
