@@ -4,7 +4,7 @@ library(RCurl)
 
 
 
-get_pkgs_statistics <- function ( pks_list_arg ) {
+get_pkgs_statistics <- function ( pks_list_arg , rdata_destination) {
   #List of Packages to download statistics
   pks_list <- pks_list_arg;
   
@@ -73,10 +73,10 @@ get_pkgs_statistics <- function ( pks_list_arg ) {
   # Create and Update RData Object 
   
   
-  if (file.exists("stats_dicits.Rdata") == TRUE) {
+  if (file.exists(rdata_destination) == TRUE) {
     # Next executions RData object is loaded and backup, in order
     # to append new data.
-    fname_first <- "stats_dicits.Rdata";
+    fname_first <- rdata_destination;
     load (file=fname_first); # In var: dat
     
     #Backup dat variable
@@ -89,9 +89,9 @@ get_pkgs_statistics <- function ( pks_list_arg ) {
     save(dat,file=fname_first);
   } else {
     # First execution, RData is stored in dat variable.
-    fname <- "stats_dicits.Rdata";
+    fname <- rdata_destination;
     dat <- rbindlist(ldf);
-    save(dat,file=fname)
+    save(dat,file=fname);
   } 
 
 } # End function
@@ -105,6 +105,6 @@ get_pkgs_statistics <- function ( pks_list_arg ) {
 list_pkgs <- c("Rmalschains","frbs","RSNNS","RoughSets");
 
 # Call to the funcion
-get_pkgs_statistics( list_pkgs );
+get_pkgs_statistics( list_pkgs , "/tmp/stats_dicits.Rdata" );
 
 
