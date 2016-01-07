@@ -38,6 +38,25 @@ list_pkgs <- c("Rmalschains","frbs","RSNNS","RoughSets");
 get_pkgs_statistics( list_pkgs , "/tmp/stats_dicits.Rdata" );
 ```
 
+## Create a simply report 
+Once the process is finished, the Rdata object is stored and contains the data for later analysis. The analysis is simple as the RDATA Object contains fields: `date`, `time`, `size`, `r_version`, `r_arch`, `r_os, package`, `version, country`, `ip_id, weekday`, `week`.
+
+
+```
+# Variable dat from RData Object
+rsnns_rows <- dat[dat$package == "RSNNS",]
+
+# Table of data by week
+data_logs_RSNNS <- data.frame(table(rsnns_rows$week));
+
+# Plot data
+plot(data_logs_RSNNS, xlab="Week", ylab="Number of downloads")
+lines(data_logs_RSNNS)
+```
+
+
+
+
 
 
 
