@@ -39,7 +39,7 @@ get_pkgs_statistics( list_pkgs , "/tmp/stats_dicits.Rdata" );
 ```
 
 
-## Create a simply report 
+## Create a simple report 
 Once the process is finished, the Rdata object is stored and contains the data for later analysis. The analysis is simple as the RDATA Object contains fields: `date`, `time`, `size`, `r_version`, `r_arch`, `r_os, package`, `version, country`, `ip_id, weekday`, `week`.
 
 
@@ -55,7 +55,7 @@ plot(data_logs_RSNNS, xlab="Week", ylab="Number of downloads")
 lines(data_logs_RSNNS)
 ```
 
-## Create a simply report with KnitR and Markdown
+## Create a simple report with KnitR and Markdown
 
 A full example in `knitr_report/report_packages.Rmd` [LINK](knitr_report/report_packages.Rmd) is provided.
 
