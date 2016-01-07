@@ -1,0 +1,69 @@
+---
+title: "R DiCITS packages downloads"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 4
+    number_sections: true
+    fig_caption: true
+
+---
+
+```{r, include=FALSE, cache=FALSE}
+load(file="/tmp/test_dicits.Rdata");
+
+dat <- data.frame(dat);
+
+rsnns_rows <- dat[dat$package == "RSNNS",]
+frbs_rows <- dat[dat$package == "frbs",]
+Rmalschains_rows <- dat[dat$package == "Rmalschains",]
+RoughSets_rows <- dat[dat$package == "RoughSets",]
+```
+
+
+
+# RSNNS
+
+Downloads from `r min(rsnns_rows$date)` to `r max(rsnns_rows$date)`: **`r nrow(rsnns_rows)`** unique downloads.
+
+```{r, fig.width=10, fig.height=5, fig.cap = "Figure: RSNNS",   echo=FALSE}
+aa <- data.frame(table(rsnns_rows$week));
+plot(aa, xlab="Week", ylab="Downloads")
+lines(aa)
+```
+
+# frbs
+
+Downloads from `r min(frbs_rows$date)` to `r min(frbs_rows$date)` : **`r nrow(frbs_rows)`** unique downloads.
+
+```{r, fig.width=10, fig.height=5, fig.cap = "Figure: frbs",   echo=FALSE}
+
+aa <- data.frame(table(frbs_rows$week));
+plot(aa, xlab="Week", ylab="Downloads")
+lines(aa)
+```
+
+# Rmalschains
+
+Downloads from `r min(Rmalschains_rows$date)` to `r min(Rmalschains_rows$date)`: **`r nrow(Rmalschains_rows)`** unique downloads.
+
+```{r, fig.width=10, fig.height=5, fig.cap = "Figure: Rmalschains",   echo=FALSE}
+
+aa <- data.frame(table(Rmalschains_rows$week));
+plot(aa, xlab="Week", ylab="Downloads")
+lines(aa)
+```
+
+# RoughSets
+
+Downloads from `r min(RoughSets_rows$date)` to `r min(RoughSets_rows$date)`: **`r nrow(RoughSets_rows)`** unique downloads.
+
+
+```{r, fig.width=10, fig.height=5, fig.cap = "Figure: RoughSets",   echo=FALSE}
+
+aa <- data.frame(table(RoughSets_rows$week));
+plot(aa, xlab="Week", ylab="Downloads")
+lines(aa)
+```
+
+
