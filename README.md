@@ -3,7 +3,7 @@ R code to get and to update statistics of downloading R Packages.
 
 This code lets you download CRAN data download statistics of the packages indicated in the header settings. It also allows update statistics daily, automatically downloading only the required days from the last data download.
 
-The statistics of downloads from CRAN selected libraries are stored in a RData object. This RData object is updated  on each call to the function get_statistics
+The statistics of downloads from CRAN selected libraries are stored in a RData object. This RData object is updated  on each call to the function `get_pkgs_statistics`. It allows the statistics are updated each day if needed.
 
 
 ## Requirements
@@ -37,6 +37,7 @@ list_pkgs <- c("Rmalschains","frbs","RSNNS","RoughSets");
 # Call to the funcion
 get_pkgs_statistics( list_pkgs , "/tmp/stats_dicits.Rdata" );
 ```
+
 
 ## Create a simply report 
 Once the process is finished, the Rdata object is stored and contains the data for later analysis. The analysis is simple as the RDATA Object contains fields: `date`, `time`, `size`, `r_version`, `r_arch`, `r_os, package`, `version, country`, `ip_id, weekday`, `week`.
