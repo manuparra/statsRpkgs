@@ -54,6 +54,12 @@ plot(data_logs_RSNNS, xlab="Week", ylab="Number of downloads")
 lines(data_logs_RSNNS)
 ```
 
+## Create a report with KnitR and Markdown
+
+A full example in knitr/report_packages.Rmd is provided.
+
+In this example we show downloading statistics for our `c("Rmalschains","frbs","RSNNS","RoughSets");` packages.
+
 
 
 
