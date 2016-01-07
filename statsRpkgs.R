@@ -9,9 +9,9 @@ get_pkgs_statistics <- function ( pks_list_arg , rdata_destination) {
   pks_list <- pks_list_arg;
   
   # Begin and End Dates
-  start <- as.Date('2015-12-30')
-  today <- as.Date('2016-01-02')
-  #today <- as.Date(format(Sys.Date(), format="%Y-%m-%d"),"%Y-%m-%d")
+  start <- as.Date('2012-10-10')
+  #today <- as.Date('2016-01-02')
+  today <- as.Date(format(Sys.Date(), format="%Y-%m-%d"),"%Y-%m-%d")
   
   all_days <- seq(start, today , by = 'day')
   
