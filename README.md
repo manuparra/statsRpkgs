@@ -6,6 +6,8 @@ This code lets you download CRAN data download statistics of the packages indica
 The statistics of downloads from CRAN selected libraries are stored in a RData object. This RData object is updated  on each call to the function get_statistics
 
 
+
+
 ## Requirements
 
 statsRpkgs requires:
@@ -13,4 +15,13 @@ statsRpkgs requires:
 `library(data.table)`
 
 `library(RCurl)`
+
+so, you need install the following packages:
+
+```
+install.packages("data.table")
+install.packages("RCurl")
+```
+
+
 
