@@ -54,13 +54,19 @@ plot(data_logs_RSNNS, xlab="Week", ylab="Number of downloads")
 lines(data_logs_RSNNS)
 ```
 
-## Create a report with KnitR and Markdown
+## Create a simply report with KnitR and Markdown
 
-A full example in knitr/report_packages.Rmd is provided.
+A full example in `knitr_report/report_packages.Rmd` [LINK](knitr_report/report_packages.Rmd) is provided.
 
 In this example we show downloading statistics for our `c("Rmalschains","frbs","RSNNS","RoughSets");` packages.
 
+To complile report and produce an HTML output use in R:
 
+`rmarkdown::render("report_packages.Rmd")`
+
+Example of basic  report generated:
+
+![Report Image](https://github.com/manuparra/statsRpkgs/blob/master/imgs/report_example.png)
 
 
 
