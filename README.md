@@ -25,7 +25,7 @@ install.packages("RCurl")
 Get statsRpkgs.R and paste it in your R Code.
 
 Then use `get_pkgs_statistics(list_packages,rdata_destination)`.
-It will start to download CRAN package download logs for only `list_packages` packages from http://cran-logs.rstudio.com/ from the first day of logs until last day (today), and it will save the package logs on a RData Object in`rdata_destination` file 
+It will start to download CRAN package download logs for only `list_packages` packages from http://cran-logs.rstudio.com/ from the first day of logs until last day (today), and it will save the package logs on a RData Object in`rdata_destination` file.
 
 
 A working example:
