@@ -49,6 +49,7 @@ rsnns_rows <- dat[dat$package == "RSNNS",]
 
 # Table of data by week
 data_logs_RSNNS <- data.frame(table(rsnns_rows$week));
+#data_logs_RSNNS <- data.frame(table(rsnns_rows$country));
 
 # Plot data
 plot(data_logs_RSNNS, xlab="Week", ylab="Number of downloads")
@@ -61,7 +62,7 @@ A full example in `knitr_report/report_packages.Rmd` [LINK](knitr_report/report_
 
 In this example we show downloading statistics for our `c("Rmalschains","frbs","RSNNS","RoughSets");` packages.
 
-To complile report and produce an HTML output use in R:
+To complile report and produce an HTML output, use in R:
 
 `rmarkdown::render("report_packages.Rmd")`
 
